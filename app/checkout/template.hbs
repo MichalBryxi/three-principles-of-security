@@ -1,0 +1,47 @@
+{{#link-to 'gallery'}}
+  {{#paper-button}}
+    {{paper-icon 'chevron-left'}}
+    Back to gallery
+  {{/paper-button}}
+{{/link-to}}
+
+{{#if basket.queue.length}}
+  {{#paper-content class="md-whiteframe-z1 list-demo"}}
+    {{#paper-list}}
+      {{#each basket.queue as |item|}}
+        {{#paper-item class="md-3-line"}}
+          <img src={{item.img}} class="md-avatar">
+          <div class="md-list-item-text">
+            <h3>{{item.name}}</h3>
+            <h4>{{unitPrice}}￡</h4>
+          </div>
+        {{/paper-item}}
+      {{/each}}
+
+      {{paper-divider}}
+
+      {{#paper-item class="md-3-line"}}
+        <div class="md-list-item-text">
+          <h4>Sum: {{sum}}￡</h4>
+        </div>
+      {{/paper-item}}
+    {{/paper-list}}
+  {{/paper-content}}
+
+  <br />
+  {{#paper-switch value=termsAgreed onChange=(action (mut termsAgreed))}}
+    I know what I'm doing. This will cost me money.
+  {{/paper-switch}}
+
+  {{#paper-button onClick=(action "buy") disabled=buttonEnabled warn=true raised=true}}
+    Uselessly spend {{sum}}￡
+  {{/paper-button}}
+  <br />
+{{/if}}
+
+{{#each basket.bought as |item index|}}
+  <img class="invisible-picture" src="{{item.url}}&counter={{index}}" />
+  {{#paper-button disabled=true fab=true}}
+    {{paper-icon "done"}}
+  {{/paper-button}}
+{{/each}}

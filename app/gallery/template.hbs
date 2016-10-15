@@ -1,0 +1,21 @@
+<div class="layout-row layout-wrap">
+  {{#each model as |song|}}
+    {{#paper-card class="flex-20" as |card|}}
+      {{card.image src=song.img alt="Washed Out" title="Washed Out"}}
+      {{#card.actions}}
+        {{#paper-button iconButton=true onClick=(action "addToBasket" song)}}
+          {{paper-icon "add-shopping-cart"}}
+        {{/paper-button}}
+      {{/card.actions}}
+    {{/paper-card}}
+  {{/each}}
+</div>
+
+{{#if basket.queue.length}}
+  {{#link-to 'checkout'}}
+    {{#paper-button class="show-basket" accent=true raised=true fab=true}}
+      <small>{{basket.queue.length}}</small>
+      {{paper-icon "shopping-cart"}}
+    {{/paper-button}}
+  {{/link-to}}
+{{/if}}

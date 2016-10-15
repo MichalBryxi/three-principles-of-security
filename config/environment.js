@@ -4,15 +4,14 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'three-principles-of-security',
     environment: environment,
-    rootURL: '/',
-    locationType: 'auto',
+    baseURL: '/',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
       }
     },
-
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
@@ -29,6 +28,7 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
+    ENV.baseURL = '/';
     ENV.locationType = 'none';
 
     // keep test console output quieter
