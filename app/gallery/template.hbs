@@ -9,13 +9,15 @@
       {{/card.actions}}
     {{/paper-card}}
   {{/each}}
-</div>
 
-{{#if basket.queue.length}}
-  {{#link-to 'checkout'}}
-    {{#paper-button class="show-basket" accent=true raised=true fab=true}}
-      <small>{{basket.queue.length}}</small>
-      {{paper-icon "shopping-cart"}}
-    {{/paper-button}}
-  {{/link-to}}
-{{/if}}
+  {{#if basket.queue.length}}
+    {{#paper-card class=" layout-align-center-center flex-20" as |card|}}
+      {{#link-to 'checkout'}}
+        {{#paper-button class="show-basket" accent=true raised=true fab=true}}
+          <small>{{basket.queue.length}}</small>
+          {{paper-icon "shopping-cart"}}
+        {{/paper-button}}
+      {{/link-to}}
+    {{/paper-card}}
+  {{/if}}
+</div>

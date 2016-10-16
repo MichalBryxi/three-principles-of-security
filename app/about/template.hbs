@@ -1,0 +1,52 @@
+<h1>Security is ...</h1>
+
+<h2>Internet security</h2>
+
+<blockquote cite="https://en.wikipedia.org/wiki/Internet_security">
+  <a href="https://en.wikipedia.org/wiki/Internet_security">Internet security</a> is a branch of computer security specifically related to the Internet, often involving browser security but also network security on a more general level as it applies to other applications or operating systems on a whole. Its objective is to establish rules and measures to use against attacks over the Internet. The Internet represents an insecure channel for exchanging information leading to a high risk of intrusion or fraud, such as phishing. Different methods have been used to protect the transfer of data, including encryption and from-the-ground-up engineering.
+</blockquote>
+
+<h2>Cross-site scripting</h2>
+<blockquote cite="https://en.wikipedia.org/wiki/Cross-site_scripting">
+  <a href="https://en.wikipedia.org/wiki/Cross-site_scripting">Cross-site scripting</a> (XSS) is a type of computer security vulnerability typically found in web applications. XSS enables attackers to inject client-side scripts into web pages viewed by other users. A cross-site scripting vulnerability may be used by attackers to bypass access controls such as the same-origin policy. Cross-site scripting carried out on websites accounted for roughly 84% of all security vulnerabilities documented by Symantec as of 2007. Their effect may range from a petty nuisance to a significant security risk, depending on the sensitivity of the data handled by the vulnerable site and the nature of any security mitigation implemented by the site's owner.
+</blockquote>
+
+<h2>Computer access control</h2>
+<blockquote cite="https://en.wikipedia.org/wiki/Computer_access_control">
+  In computer security, general <a href="https://en.wikipedia.org/wiki/Computer_access_control">access control</a> includes identification, authorization, authentication, access approval, and audit. A more narrow definition of access control would cover only access approval, whereby the system makes a decision to grant or reject an access request from an already authenticated subject, based on what the subject is authorized to access. Authentication and access control are often combined into a single operation, so that access is approved based on successful authentication, or based on an anonymous access token. Authentication methods and tokens include passwords, biometric scans, physical keys, electronic keys and devices, hidden paths, social barriers, and monitoring by humans and automated systems.
+</blockquote>
+
+<h1>This site is ...</h1>
+
+<h2>Three has internal system for customers</h2>
+<img src="/img/01.png" />
+<h2>It has nifty features, including store</h2>
+<img src="/img/03.png" />
+<h2>You can find thousands of tracks there</h2>
+<img src="/img/04.png" />
+<h2>And buy them</h2>
+<img src="/img/05.png" />
+<h2>Without "any" authorization</h2>
+<img src="/img/06.png" />
+<h2>Thank you, but no thank you...</h2>
+<img src="/img/07.png" />
+
+<p>
+  This site is <abbr title="Proof Of Concept">POC</abbr> of malicious attacks on Three customers. If you are Three customer and you are connected via GSM, you are able to view site <a href="http://mobile.trhee.co.uk">http://mobile.three.co.uk</a>. This site will reveal a lot of personal information. Your tariff, your allowances, current credit, phone number, etc. All that <strong>without any authentication</strong>. Three says that <q>If you're heading to My3 on your phone, you'll need to turn off Wi-Fi. This is to keep your account as secure as possible</q>. Which I translate as: "authentication is done by verifying currently connected SIMcard number".
+</p>
+
+<p>
+  And that is <abbr title="In My Humble Opinion">IMHO</abbr> very weak authentication. There is no chance to tell whether the user intended to call some URL (do some action) or any other third party did.
+</p>
+
+<p>
+  In theory it should be fairly easy to install on user's smartphone software that will wait till the smartphone is connected via GSM and collect user's personal data. But this demo does something different.
+</p>
+
+<p>
+  If Three customer is on <strong>tariff</strong>, they are able to access "Three Music Store", which allows them to buy music simply by clicking on "download" link. So it's simply hitting a URL. Without any authentication - I even used incognito mode to take the screenshots. This website is able to create such URLs and massively call them. Which in turn ... charges you.
+</p>
+
+<p>
+  Not too dangerous? What if spend some money on web / in-app ads and make my ads hit such URLs? Poor user browsing internet / playing Angry Birds can be charged 1.29￡ without any previous warning. Thousand times per single ad, no problem.
+</p>

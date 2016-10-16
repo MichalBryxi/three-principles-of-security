@@ -1,17 +1,10 @@
-// Define desired color palettes.
-$primary: "grey";
-$accent: "deep-orange";
-$warn: "brown";
+$primary: 'grey';
+$accent: 'deep-orange';
+$warn: 'brown';
 
 @import 'ember-paper';
 
-.show-basket {
-  position: fixed;
-  right: 1em;
-  bottom: 1em;
-}
-
 .invisible-picture {
-  width: 1px;
   height: 1px;
+  width: 1px;
 }
