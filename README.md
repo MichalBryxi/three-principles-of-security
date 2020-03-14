@@ -1,3 +1,5 @@
+# Project moved to: https://gitlab.com/michal.bryxi/three-principles-of-security
+
 # Three-principles-of-security
 
 This README outlines the details of collaborating on this Ember application.
